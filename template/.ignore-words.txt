@@ -3,6 +3,10 @@ Inclusivity
 Noto
 Segoe
 biomejs
+bradlc
+dejmedus
 doxxing
+esbuild
 geologica
+lokalise
 tailwindcss
