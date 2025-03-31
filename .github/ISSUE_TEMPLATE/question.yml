@@ -1,0 +1,51 @@
+name: Question
+description: Ask a question about this project
+title: "[Question]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to ask a question!
+
+        Before you submit, please check if your question has already been answered in:
+        - [Existing issues](https://github.com/li-dao-dev/create-li-next-project/issues)
+        - [Discussions](https://github.com/li-dao-dev/discussions)
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What do you want to know about this project?
+      placeholder: "I would like to understand how..."
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Question Category
+      description: What area is your question related to?
+      options:
+        - Usage
+        - Installation
+        - Configuration
+        - Features
+        - Development
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add any other context or screenshots that might help us understand your question better.
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this question, you agree to follow our [Code of Conduct](../CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

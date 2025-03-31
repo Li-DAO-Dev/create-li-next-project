@@ -1,0 +1,8 @@
+EDITMSG
+Inclusivity
+Noto
+Segoe
+biomejs
+doxxing
+geologica
+tailwindcss

@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme inline {
+  --font-sans: var(--font-sans-next), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: var(--font-serif-next), ui-serif, serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+:root {
+  --color-primary-v: #6a63dd;
+  --color-primary-light-v: #8084f0;
+  --color-primary-dark-v: #4a43c0;
+  --color-primary-contrast-v: #fff;
+
+  --color-secondary-v: var(--color-amber-400);
+  --color-secondary-light-v: var(--color-amber-200);
+  --color-secondary-dark-v: var(--color-amber-600);
+  --color-secondary-contrast-v: #fff;
+
+  --color-primary-text-v: #000;
+  --color-secondary-text-v: #8b8b8b;
+
+  --color-background-v: #fff;
+  --color-paper-v: #f5f5f5;
+}
+
+[data-theme="dark"] {
+  --color-primary-v: #6a63dd;
+  --color-primary-light-v: #8084f0;
+  --color-primary-dark-v: #4a43c0;
+  --color-primary-contrast-v: #fff;
+
+  --color-secondary-v: var(--color-amber-400);
+  --color-secondary-light-v: var(--color-amber-200);
+  --color-secondary-dark-v: var(--color-amber-600);
+  --color-secondary-contrast-v: #fff;
+
+  --color-primary-text-v: #fff;
+  --color-secondary-text-v: #cecece;
+
+  --color-background-v: #000;
+  --color-paper-v: #111;
+}
+
+@theme {
+  --color-primary: var(--color-primary-v);
+  --color-primary-light: var(--color-primary-light-v);
+  --color-primary-dark: var(--color-primary-dark-v);
+  --color-primary-contrast: var(--color-primary-contrast-v);
+
+  --color-secondary: var(--color-secondary-v);
+  --color-secondary-light: var(--color-secondary-light-v);
+  --color-secondary-dark: var(--color-secondary-dark-v);
+  --color-secondary-contrast: var(--color-secondary-contrast-v);
+
+  --color-primary-text: var(--color-primary-text-v);
+  --color-secondary-text: var(--color-secondary-text-v);
+
+  --color-background: var(--color-background-v);
+  --color-paper: var(--color-paper-v);
+}
+
+:root {
+  body {
+    color: var(--color-primary-text);
+    background-color: var(--color-background);
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "author": {
+    "email": "dev@lidao.pro",
+    "name": "Developers of $Li Community",
+    "url": "https://li-dao.org"
+  },
+  "bin": {
+    "create-li-next-project": "dist/index.js"
+  },
+  "bugs": {
+    "email": "dev@lidao.pro",
+    "url": "https://github.com/li-dao-dev/create-li-next-project/issues"
+  },
+  "contributors": [
+    {
+      "email": "xrororox8964@gmail.com",
+      "name": "xROx",
+      "url": "https://github.com/really-need-anonymous"
+    }
+  ],
+  "dependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^9.0.7",
+    "chalk": "^5.4.1",
+    "execa": "^9.5.2",
+    "fs-extra": "^11.3.0",
+    "inquirer": "^12.5.0"
+  },
+  "description": "CLI tool to scaffold Next.js projects for Li Community",
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.13.14",
+    "cspell": "^8.18.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "files": ["dist", "template", "template/.gitignore", "LICENSE", "README.md"],
+  "homepage": "https://github.com/li-dao-dev/create-li-next-project",
+  "keywords": ["nextjs", "scaffold", "cli", "generator", "li-community", "typescript"],
+  "license": "AGPL-3.0-only",
+  "main": "dist/index.js",
+  "maintainers": [
+    {
+      "email": "xrororox8964@gmail.com",
+      "name": "xROx",
+      "url": "https://github.com/really-need-anonymous"
+    }
+  ],
+  "name": "@li-dao-dev/create-li-next-project",
+  "packageManager": "pnpm@10.7.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "readme": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/li-dao-dev/create-li-next-project.git"
+  },
+  "scripts": {
+    "biome": "biome check --write --error-on-warnings .",
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "spell-check": "cspell -c .cspell.json .",
+    "start": "node dist/index.js",
+    "type-check": "tsc --noEmit"
+  },
+  "type": "module",
+  "version": "0.1.0"
+}
