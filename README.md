@@ -25,17 +25,17 @@
 
 ```bash
 # Using npx (npm)
-npx @li-dao-dev/create-li-next-project my-app
+npx @li-dao-dev/create-li-next-project
 
 # Using pnpm
-pnpm dlx @li-dao-dev/create-li-next-project my-app
+pnpm dlx @li-dao-dev/create-li-next-project
 
 # Using yarn
-yarn dlx @li-dao-dev/create-li-next-project my-app
+yarn dlx @li-dao-dev/create-li-next-project
 
 # Global installation
 npm install -g @li-dao-dev/create-li-next-project
-create-li-next-project my-app
+create-li-next-project
 ```
 
 ## Scaffold Options
