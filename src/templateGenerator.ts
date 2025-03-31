@@ -166,11 +166,11 @@ async function setupI18n(projectPath: string, languages: string[]): Promise<void
   console.log(chalk.green("Created i18n/navigation.ts and i18n/request.ts"))
 
   // Create custom routing.ts with selected languages
-  const defaultLocale = languages.includes("zh-CN") ? "zh-CN" : languages[0]
+  const defaultLocale = languages.includes("en") ? "en" : languages[0]
   const routingContent = `import { defineRouting } from "next-intl/routing"
 
 export const routing = defineRouting({
-  locales: ${JSON.stringify(languages)},
+  locales: ${JSON.stringify(languages.sort((a, b) => a.localeCompare(b)))},
   defaultLocale: "${defaultLocale}",
 })
 `
@@ -555,18 +555,18 @@ export default async function Home({
   const t = await getTranslations({ locale, namespace: "HomePage" })
 
   return (
-    <div class="flex justify-center items-center h-screen">
-      <div class="flex gap-4">
-        <div class="flex flex-col">
+    <div className="flex justify-center items-center h-screen">
+      <div className="flex gap-4">
+        <div className="flex flex-col">
           <div>
-            <h1 class="font-bold text-4xl">{t("title")}</h1>
+            <h1 className="font-bold text-4xl">{t("title")}</h1>
           </div>
           <div>
-            <p class="text-secondary-text text-xm">{t("hello")}</p>
+            <p className="text-secondary-text text-xm">{t("hello")}</p>
           </div>
         </div>
-        <div class="flex justify-center items-center bg-secondary rounded-full size-16">
-          <p class="font-medium text-primary text-5xl">LI</p>
+        <div className="flex justify-center items-center bg-secondary rounded-full size-16">
+          <p className="font-medium text-primary text-5xl">LI</p>
         </div>${useNextThemes ? "\n        <SimpleThemeSwitcher />" : ""}
       </div>
     </div>
@@ -705,18 +705,18 @@ export default async function RootLayout({
 // biome-ignore lint/style/noDefaultExport: page.tsx
 export default async function Home() {
   return (
-    <div class="flex justify-center items-center h-screen">
-      <div class="flex gap-4">
-        <div class="flex flex-col">
+    <div className="flex justify-center items-center h-screen">
+      <div className="flex gap-4">
+        <div className="flex flex-col">
           <div>
-            <h1 class="font-bold text-4xl">Home</h1>
+            <h1 className="font-bold text-4xl">Home</h1>
           </div>
           <div>
-            <p class="text-secondary-text text-xm">Hello Community</p>
+            <p className="text-secondary-text text-xm">Hello Community</p>
           </div>
         </div>
-        <div class="flex justify-center items-center bg-secondary rounded-full size-16">
-          <p class="font-medium text-primary text-5xl">LI</p>
+        <div className="flex justify-center items-center bg-secondary rounded-full size-16">
+          <p className="font-medium text-primary text-5xl">LI</p>
         </div>${useNextThemes ? "\n        <SimpleThemeSwitcher />" : ""}
       </div>
     </div>
