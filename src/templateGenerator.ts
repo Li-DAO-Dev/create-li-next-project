@@ -813,6 +813,8 @@ async function runPostCreationCommands(projectPath: string, projectName: string)
       // Install pre-commit hooks
       console.log(chalk.cyan("Installing pre-commit hooks..."))
       await execa("pre-commit", ["install"])
+      await execa("git", ["add", "."])
+      await execa("pre-commit", ["run", "--all-files"])
       console.log(chalk.green("Pre-commit hooks installed"))
     } catch {
       console.log(chalk.yellow("pre-commit not found. Skipping pre-commit hooks installation."))
